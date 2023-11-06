@@ -96,7 +96,7 @@ body{
 
 .fases-processuais{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   position: static;
   margin: 0 auto;
   flex-wrap: wrap;

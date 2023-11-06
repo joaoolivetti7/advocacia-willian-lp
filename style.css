@@ -55,7 +55,7 @@ body{
     padding: 1rem;
 }
 
-.bnr-principal .btn-action{
+.btn-action{
     display: flex;
     justify-content: center;
 }
@@ -75,7 +75,6 @@ body{
     font-weight: bold;
     border-radius: 10px;
     padding: 1rem;
-    font-weight: 700;
     align-self: flex-end;
   }
   
@@ -121,11 +120,71 @@ body{
     
   }
 
-  .botao-fases{
+
+
+  .title-help, .help{
+    background-color: black;
+  }
+
+  .title-help {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem;
+  }
+
+  .help{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 17%);
+    justify-content: center;
+    
+  }
+
+  .help p{
+    font-weight: bold;
     text-align: center;
   }
 
-  .botao-fases .btn-action{
-    display: flex;
+  .box{
+    background-color: #e7e7e7;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 40px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
+
+  .box:hover{
+    transition: 0.2;
+    scale: 1.1;
+  }
+
+  .about{
+    display: flex;
+    padding: 50px 200px;
+  }
+
+  .about img{
+    border-radius: 20px;
+    padding: 1rem;
+  }
+
+  .title-about h2{
+    font-size: 50px;
+    padding: 1rem;
+  }
+
+  .title-about p{
+    padding: 1rem;
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .inicio-processo{
+    background-image: url(assets/img/O\ COWORKING\ QUE\ VOCÊ\ PRECISA!\ \(9\).png);
+  }
+
+

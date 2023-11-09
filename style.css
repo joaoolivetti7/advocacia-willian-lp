@@ -262,7 +262,7 @@ ul li {
   padding: 20px;
 }
 
-.svg-fale{
+.svg-redes{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,7 +286,7 @@ ul li {
   padding: 10px;
 }
 
-.svg-fale svg{
+.svg-redes svg{
   color: white;
 }
 

@@ -37,6 +37,8 @@ html {
 }
   
 body{
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   background-color: var(--dark2);
@@ -54,21 +56,26 @@ body{
   justify-content: center;
 }
 
+.bnr-principal > img {
+  display: none;
+}
+
+.titulo-banner {
+  display: none;
+}
+
 .bnr-principal a{
   padding: 1rem;
 }
 
+.btn-action svg{
+  max-width: 33px;
+}
+
 .btn-action{
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
-}
-
-.btn-action svg{
-  width: 33px;
-}
-
-.btn-action{
-  margin: 2rem;
   transition: .2s;
   align-items: center;
   gap: 1rem;
@@ -78,7 +85,7 @@ body{
   font-weight: bold;
   border-radius: 10px;
   padding: 1rem;
-  align-self: flex-end;
+  align-self: center;
 }
   
 .btn-action:hover {
@@ -97,7 +104,6 @@ body{
 .fases-processuais{
   display: flex;
   justify-content: center;
-  position: static;
   margin: 0 auto;
   flex-wrap: wrap;
   gap: 1rem;
@@ -157,6 +163,10 @@ ul li {
   padding: 1rem;
 }
 
+.title-help strong {
+  display: none;
+}
+
 .help{
   display: flex;
   justify-content: center;
@@ -191,14 +201,30 @@ ul li {
   transition: 0.2;
 }
 
+#about {
+  width: 100%;
+}
+
 .about{
+  margin: 0 auto;
+  max-width: 80%;
   display: flex;
-  padding: 50px 200px;
+  padding: 3rem;
+}
+
+.about div:nth-of-type(1){
+  width: 50%;
+  min-width: 250px;
 }
 
 .about img{
+  width: 100%;
   border-radius: 20px;
   padding: 1rem;
+}
+
+.title-about {
+  max-width: 50%
 }
 
 .title-about h2{
@@ -212,8 +238,12 @@ ul li {
   text-align: left;
 }
 
+.title-about a {
+  text-wrap: wrap;
+}
+
 .inicio-processo{
-  background-image: url(assets/img/O\ COWORKING\ QUE\ VOCÊ\ PRECISA!\ \(9\).png);
+  background-image: url('assets/img/O\ COWORKING\ QUE\ VOCÊ\ PRECISA!\ \(9\).png');
   background-size: cover; 
   background-position: top;
   height: 70vh;
@@ -327,4 +357,200 @@ ul li {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  /* INICIO */
+  .bnr-principal{
+    background-image: url('./assets/img/banner-principal-celular.jpg');
+    background-position: 30%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  #imgLogo {
+    display: flex;
+    position: absolute;
+    max-width: 100%;
+    top: 0
+  }
+
+  .titulo-banner {
+    display: block;
+    margin: 3rem 0;
+  }
+  
+  .titulo-banner h2 {
+    font-size: 1.4rem;
+  } 
+
+  .titulo-banner h1, .titulo-banner h2 {
+    color: white;
+    text-align: center;
+  }
+
+  .titulo-banner strong{ 
+    color: #dec684
+  }
+  
+  .btn-action{
+    margin: 0 1rem 2rem;
+  }
+
+  /* FASES */
+  .fases-processuais{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 0 2rem;
+  }
+  
+  .fase-investigativa, .fase-pre-processual, .fase-processual, .fase-recursal{
+    width: 70%;
+    max-width: none;
+  }
+
+  /* HELP */
+  .title-help, .help{
+    background-color: transparent
+  }
+  
+  .title-help {
+    font-size: 1.5rem;
+  }
+
+  .title-help strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #dec684
+  }
+  
+  .help .container-help {
+    max-width: none;
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+  }
+  
+  .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 200px;
+    filter: drop-shadow(2px 5px 2px black)
+  }
+
+  /* SOBRE */
+  .about{
+    max-width: 100%;
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  
+  .about div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 250px;
+  }
+  
+  .about img{
+    border-radius: 0;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  
+  .title-about {
+    max-width: 100%;
+    padding: 1rem
+  }
+  
+  .title-about h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .title-about p{
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 20px;
+    text-align: justify;
+  }
+  
+  .title-about a {
+    max-width: 100%;
+  }
+
+  /* PROCESSO */
+  .inicio-processo{
+    background-image: none;
+    background: linear-gradient(-30deg,gray,  #000000 80%);
+    height: auto;
+    padding: 2rem 0 0;
+  }
+  
+  .box-inicio{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .inicio-processo h2{
+    text-align: center;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .box-conteudo{
+    margin: 0;
+    border-radius: 1rem;
+    min-width: 100%;
+    height: fit-content;
+    padding: 1.5rem 0 0;
+  }
+
+  /* FALE CONOSCO */
+  .fale-conosco h2{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  /* AREAS */
+  .areas{
+    background-color: var(--dark1);
+    padding: 1rem 2rem
+  }
+
+  .areas h2{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  .areas .list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem 0;
+    margin: 1rem 0;
+  }
+
+  .list .list-one, .list-two, .list-three, .list-four,.list-five, .list-six, .list-seven, .list-eight, .list-nine, .list-teen, .list-eleven, .list-twelve, .list-thirteen, .list-fourteen, .list-fifteen, .list-sixteen, .list-seventeen, .list-eighteen, .list-nineteen, .list-twenty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 1rem;
+    height: 4rem;
+  }
 }

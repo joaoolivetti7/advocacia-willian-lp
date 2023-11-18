@@ -243,17 +243,17 @@ ul li {
 }
 
 .inicio-processo{
+  display: flex;
+  flex-direction: column;
   background-image: url('assets/img/O\ COWORKING\ QUE\ VOCÊ\ PRECISA!\ \(9\).png');
   background-size: cover; 
   background-position: top;
-  height: 70vh;
+  align-items: flex-end;
 }
 
 .box-inicio{
-  padding: 20px;
-  margin: 20px;
   display: flex;
-  justify-content: right;
+  flex-wrap: wrap;
 }
 
 .inicio-processo h2{
@@ -267,12 +267,11 @@ ul li {
 .box-conteudo{
   text-align: center;
   background-color: var(--gold);
-  margin: 20px;
-  border-radius: 50px;
+  margin: 1.5rem;
+  border-radius: 3rem;
   gap: 1rem;
-  width: 273px;
-  height: 413px;
-  padding: 10px;
+  padding: 1rem;
+  max-width: 275px;
 }
 
 .box-conteudo h3{
@@ -432,10 +431,11 @@ ul li {
   
   .help .container-help {
     max-width: none;
-    padding: 1rem;
+    padding: 0;
     display: flex;
     overflow-x: scroll;
     gap: 1rem;
+    scroll-snap-type: x mandatory;
   }
   
   .box{
@@ -443,7 +443,9 @@ ul li {
     flex-direction: column;
     justify-content: space-evenly;
     min-height: 200px;
-    filter: drop-shadow(2px 5px 2px black)
+    filter: drop-shadow(2px 5px 2px black);
+    margin: 0 1rem;
+    scroll-snap-align: start;
   }
 
   /* SOBRE */
@@ -493,7 +495,7 @@ ul li {
     background-image: none;
     background: linear-gradient(-30deg,gray,  #000000 80%);
     height: auto;
-    padding: 2rem 0 0;
+    padding: 2rem 1rem;
   }
   
   .box-inicio{
@@ -507,9 +509,9 @@ ul li {
   
   .inicio-processo h2{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0;
-    margin: 0;
+    margin: 0 0 1rem;
   }
   
   .box-conteudo{
